@@ -67,6 +67,7 @@ http://localhost:5000
 .
 ├── backend/                 # Backend application code
 │   ├── server.py            # Entry point of the Flask application
+│   ├── utils.py             # Terminal logs for debugging
 │   ├── system_state.db      # SQLite database (auto-created)
 │   └── requirements.txt     # Python dependencies
 │
