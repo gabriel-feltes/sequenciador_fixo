@@ -6,26 +6,21 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Set the working directory in the container
-WORKDIR /backend
+WORKDIR /sequenciador_fixo
 
-# Copy the requirements file into the container
-COPY backend/requirements.txt /backend/requirements.txt
+# Copy the backend and frontend files
+COPY backend /sequenciador_fixo/backend
+COPY frontend /sequenciador_fixo/frontend
 
-# Install system dependencies and Python dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    && pip install --no-cache-dir -r requirements.txt \
-    && apt-get purge -y --auto-remove build-essential \
-    && rm -rf /var/lib/apt/lists/*
+# Set the working directory to the backend
+WORKDIR /sequenciador_fixo/backend
 
-# Copy the backend application files into the container
-COPY backend /backend
-
-# Copy the frontend application files into the container
-COPY frontend /backend/frontend
+# Install Python dependencies
+COPY backend/requirements.txt /sequenciador_fixo/backend/requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose the port the app runs on
 EXPOSE 5000
 
-# Set the command to run the Flask application
+# Set the command to run the application
 CMD ["python", "server.py"]
