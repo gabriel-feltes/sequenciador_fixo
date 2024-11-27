@@ -1,0 +1,215 @@
+/* Estilos básicos do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Estilo do cabeçalho */
+h1 {
+    text-align: center;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+/* Estilos das seções */
+section {
+    margin-bottom: 30px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* Botões */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Campos de entrada */
+input[type="text"] {
+    width: calc(100% - 30px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Estilos para o chat */
+.chat-log {
+    max-height: 200px;
+    overflow-y: auto;
+    background: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.chat-log div {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 5px;
+}
+
+.chat-log div:last-child {
+    border-bottom: none;
+}
+
+/* Estilos para Membership */
+.membership {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.process {
+    display: inline-block;
+    min-width: 60px; /* Largura mínima */
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    font-size: 16px;
+    padding: 0 10px; /* Adiciona espaço interno para texto longo */
+    margin: 5px;
+    word-wrap: break-word; /* Garante que texto muito longo quebre */
+    overflow: hidden; /* Evita que ultrapasse o círculo */
+    cursor: pointer; /* Define o ponteiro como clicável */
+    transition: transform 0.2s; /* Suaviza a animação ao passar o mouse */
+}
+
+.process.large {
+    min-width: 80px; /* Aumenta largura mínima */
+    height: 80px; /* Aumenta altura */
+    line-height: 80px; /* Ajusta alinhamento do texto */
+    font-size: 14px; /* Reduz tamanho da fonte */
+}
+
+.process:hover {
+    transform: scale(1.1); /* Amplia o círculo levemente */
+}
+
+/* Estilos para Logs */
+.logs {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    list-style: none;
+    font-size: 14px;
+}
+
+.logs li {
+    font-family: Consolas, monospace;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.logs li:last-child {
+    border-bottom: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    input[type="text"] {
+        width: 100%;
+    }
+
+    .process {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}
+
+.sequencer {
+    display: block;
+    margin: 20px auto;
+    width: 120px;
+    height: 69.28px; /* Altura do hexágono */
+    background-color: #FFD700; /* Amarelo */
+    position: relative;
+    text-align: center;
+    line-height: 69.28px;
+    font-weight: bold;
+    color: black;
+    font-size: 16px;
+
+    /* Criando o hexágono */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.sequencer:hover {
+    background-color: #FFC107; /* Um tom mais claro ao passar o mouse */
+    transform: scale(1.1); /* Ampliar levemente */
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.diagram {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.message-to-sequencer {
+    position: absolute;
+    background-color: #FF6347; /* Vermelho */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 1000;
+    text-align: center;
+}
+
+.message-from-sequencer {
+    position: absolute;
+    background-color: #FFD700; /* Amarelo */
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 1000;
+    text-align: center;
+}
