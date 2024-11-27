@@ -67,6 +67,7 @@ http://localhost:5000
 .
 ├── backend/                 # Backend application code
 │   ├── server.py            # Entry point of the Flask application
+│   ├── utils.py             # Terminal logs for debugging
 │   ├── system_state.db      # SQLite database (auto-created)
 │   └── requirements.txt     # Python dependencies
 │
@@ -74,8 +75,8 @@ http://localhost:5000
 │   ├── templates/           # HTML templates
 │   │   └── index.html       # Main frontend template
 │   └── static/              # Static files (CSS, JS, images)
-│       ├── styles.css       # CSS for the application
-│       └── app.js           # JavaScript for the frontend
+│       └── styles.css       # CSS for the application
+│       
 │
 ├── Dockerfile               # Docker configuration
 └── README.md                # Project documentation
