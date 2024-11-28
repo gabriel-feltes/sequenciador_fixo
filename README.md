@@ -29,12 +29,13 @@ cd sequenciador_fixo
 #### 2. **Run Locally Without Docker**
 Install the dependencies:
 ```bash
+cd /backend
 pip install -r requirements.txt
 ```
 
 Run the Flask application:
 ```bash
-python backend/server.py
+python server.py
 ```
 
 The application will be accessible at `http://localhost:5000`.
