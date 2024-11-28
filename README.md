@@ -29,7 +29,7 @@ cd sequenciador_fixo
 #### 2. **Run Locally Without Docker**
 Install the dependencies:
 ```bash
-cd /backend
+cd backend
 pip install -r requirements.txt
 ```
 
